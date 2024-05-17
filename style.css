@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(25, 33, 28);
+    color:aliceblue;
+    text-align: center;
+}
+hr {
+    border: none;
+    border-top: 2px solid #e4e4e4; /* You can adjust the color and width */
+    margin: 20px 0; /* Adjust margin as needed */
+    margin-bottom: 40px;
+}
+
+a {
+    color: rgb(112, 203, 145);
+    text-decoration: underline;
+}
+
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 800px;
+    margin-bottom: 100px;
+    color:aliceblue
+}
+.title-text {
+    margin: 0%;
+    font-size: 70px;
+    margin-bottom: 70px;
+}
+.definition {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: 40px;
+}
+.definition-card{
+    font-size: 35px;
+    text-align: left;
+    margin-left: 70px;
+}
+.definition-title{
+    color: rgb(112, 203, 145);
+}
+.causes-of-deforestation h4{
+    text-align: left;
+    margin-left: 100px;
+}
+.backdrop {
+    position: relative; /* Add position relative */
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(25, 33, 28)), /* Background gradient */
+                url('https://images.unsplash.com/photo-1516214104703-d870798883c5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Image URL */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+    color: white; /* Change text color for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0.8; /* Adjust the opacity as needed */
+    margin-bottom: 70px;
+}
+
+
+.button {
+    color: rgb(65, 145, 225)
+}
