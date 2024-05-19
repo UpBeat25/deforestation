@@ -31,16 +31,16 @@ const causesData = {
         label: 'Causes of Deforestation',
         data: [],
         backgroundColor: [
-            'rgb(65, 225, 161)',
+            '#20948B',
             '#002C54',
             '#C4DFE6',
-            '#20948B'
+            'rgb(65, 225, 161)'
         ],
         borderColor: [
-            'rgb(65, 225, 161)',
+            '#20948B',
             '#002C54',
             '#C4DFE6',
-            '#20948B'
+            'rgb(65, 225, 161)'
         ],
         borderWidth: 1
     }]
@@ -64,14 +64,14 @@ const biodiversityData = {
         label: 'Impacts on Biodiversity',
         data: [],
         backgroundColor: [
-            'rgb(112, 203, 145)',
-            'rgb(65, 225, 161)',
+            '#20948B',
+            '#002C54',
             '#2F3C7E',
             '#A1BE95'
         ],
         borderColor: [
-            'rgb(112, 203, 145)',
-            'rgb(65, 225, 161)',
+            '#20948B',
+            '#002C54',
             '#2F3C7E',
             '#A1BE95'
         ],
