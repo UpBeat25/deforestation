@@ -3,7 +3,7 @@ const deforestationData = {
     datasets: [{
         label: 'Deforestation Area (million hectares)',
         data: [],
-        backgroundColor: 'rgb(112, 203, 145)',
+        backgroundColor: 'rgb(144, 204, 166)',
         borderWidth: 5,
         fill: false,
     }]
@@ -31,16 +31,16 @@ const causesData = {
         label: 'Causes of Deforestation',
         data: [],
         backgroundColor: [
-            '#20948B',
-            '#002C54',
+            'rgb(144, 204, 166)',
+            'rgb(18, 52, 31)',
             '#C4DFE6',
-            'rgb(65, 225, 161)'
+            '#20948B'
         ],
         borderColor: [
-            '#20948B',
-            '#002C54',
+            'rgb(144, 204, 166)',
+            'rgb(18, 52, 31)',
             '#C4DFE6',
-            'rgb(65, 225, 161)'
+            '#20948B'
         ],
         borderWidth: 1
     }]
@@ -64,14 +64,14 @@ const biodiversityData = {
         label: 'Impacts on Biodiversity',
         data: [],
         backgroundColor: [
-            '#20948B',
-            '#002C54',
+            'rgb(144, 204, 166)',
+            'rgb(18, 52, 31)',
             '#2F3C7E',
             '#A1BE95'
         ],
         borderColor: [
-            '#20948B',
-            '#002C54',
+            'rgb(144, 204, 166)',
+            'rgb(18, 52, 31)',
             '#2F3C7E',
             '#A1BE95'
         ],
@@ -112,3 +112,47 @@ new Chart(document.getElementById('biodiversityChart'), {
     type: 'pie',
     data: biodiversityData
 });
+
+// ------------- metrics ------------
+
+document.addEventListener("DOMContentLoaded", function() {
+	console.log("hello!!!!!!!");
+    let secondsOnPage = 0;
+    // const waterWasteRate = 20; // Litres of water wasted per second
+    const deforestationRate = 318; // Trees cut per second (roughly)
+
+    //const timerElement = document.getElementById("timer");
+    //const waterWastedElement = document.getElementById("waterWasted");
+    const treesCutElement = document.getElementById("treesCut");
+    let treesCut = 0;
+
+    function updateMetrics() {
+        secondsOnPage++;
+        // const waterWasted = secondsOnPage * waterWasteRate;
+        treesCut = Number((secondsOnPage * deforestationRate + Math.random() * 10).toFixed(0));
+
+        // timerElement.textContent = `Time on page: ${secondsOnPage} seconds`;
+        // waterWastedElement.textContent = `Water wasted: ${waterWasted} litres`;
+        treesCutElement.innerHTML = `Since you opened this page, <b style="color: #668ba4;">${treesCut} trees have been cut.</b>`;
+        console.log('$(treesCut)');
+    }
+    
+    setInterval(updateMetrics, 1000);
+});
+
+function isMobileDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    // Check for mobile devices
+    return (/android/i.test(userAgent) || 
+            (/iPhone|iPad|iPod/.test(userAgent) && !window.MSStream));
+}
+
+function redirectIfMobile() {
+    const active = localStorage.getItem('redirected');
+    if (isMobileDevice() && !active) {
+        localStorage.setItem('redirected', 'true');
+        window.location.href = "mobile.html"; // Replace with your mobile site URL
+    }
+}
+
+window.onload = redirectIfMobile;

@@ -1,3 +1,6 @@
+:root {
+    --green: rgb(144, 204, 166);
+}
 body{
     background-color: rgb(25, 33, 28);
     font-size: 10vh;
@@ -12,7 +15,7 @@ body{
     background-size: 1.1rem 1.1rem;
 }
 hr {
-    background-color: rgb(24, 69, 41);
+    background-color: rgb(18, 52, 31);
     height: 3px;
     border: 0;
     
@@ -20,42 +23,68 @@ hr {
     margin-bottom: 5vh;
 }
 
+br {
+	display: block; /* makes it have a width */
+     content: ""; /* clears default height */
+     margin-top: 5vh; /* change this to whatever height you want it */
+}
+
 a {
-    color: rgb(112, 203, 145);
+    color: var(--green);
     text-decoration: underline;
+}
+
+p {
+	font-size: 1vh;
 }
 
 
 .chart-container {
     position: relative;
-    margin: auto;
-    height: 400px;
-    width: 800px;
-    color:aliceblue
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
 }
 .title-text {
     margin: 0%;
-    font-size: 70px;
-    margin-bottom: 70px;
+    font-size: 8vh;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    font-family: "trebuchet ms";
+    
+    color: rgb(250, 250, 250);
 }
 .definition {
     margin-top: 10px;
     font-size: 20px;
-    margin-left: auto;
-    margin-right: 40px;
+    margin-left: 3vw;
+    
+    text-align: justified;
+    font-family: "trebuchet ms";
 }
 .definition-card{
-    font-size: 35px;
+    margin-top: 10px;
+    font-size: 40px;
     text-align: left;
-    margin-left: 70px;
+    margin-left: 4vw;
+    font-family: "trebuchet ms";
 }
 .definition-title{
-    color: rgb(112, 203, 145);
-    font-size: larger;
+    margin-top: 10px;
+	margin-left: 1vw;
+    color: var(--green);
+    font-size: 5vh;
 }
-.causes-of-deforestation h4{
+h4{
+	font-size: 3vh;
     text-align: left;
-    margin-left: 100px;
+    margin-left: 6vh;
+}
+h3{
+	font-size: 6vh;
+	margin-left: 4vw;
+	margin-right: 4vw;
 }
 .backdrop {
     position: relative; /* Add position relative */
@@ -63,17 +92,28 @@ a {
                 url('https://images.unsplash.com/photo-1516214104703-d870798883c5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Image URL */
     background-size: cover;
     background-position: center;
-    height: 300px; /* Adjust the height as needed */
+    height: 40vh; /* Adjust the height as needed */
     color: white; /* Change text color for contrast */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     opacity: 0.8; /* Adjust the opacity as needed */
-    margin-bottom: 70px;
+    
 }
 
+#treesCut {
+    font-size: xx-large;
+}
 
+.heading-graph {
+    font-size: xx-large;
+    color:lightblue;
+}
+
+/* ------------------- scrollbar ------------------- */
+
+/* Webkit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 3px; /* Width of the scrollbar */
 }
