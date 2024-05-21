@@ -151,7 +151,7 @@ function redirectIfMobile() {
     const active = localStorage.getItem('redirected');
     if (isMobileDevice() && !active) {
         localStorage.setItem('redirected', 'true');
-        window.location.href = "https://upbeat25.github.io/deforestation/mobile.html"; // Replace with your mobile site URL
+        window.location.href = "mobile.html"; // Replace with your mobile site URL
     }
 }
 
