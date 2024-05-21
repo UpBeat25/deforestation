@@ -139,20 +139,3 @@ document.addEventListener("DOMContentLoaded", function() {
     
     setInterval(updateMetrics, 1000);
 });
-
-function isMobileDevice() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    // Check for mobile devices
-    return (/android/i.test(userAgent) || 
-            (/iPhone|iPad|iPod/.test(userAgent) && !window.MSStream));
-}
-
-function redirectIfMobile() {
-    const active = localStorage.getItem('redirected');
-    if (isMobileDevice() && !active) {
-        localStorage.setItem('redirected', 'true');
-        window.location.href = "deforestation/mobile.html"; // Replace with your mobile site URL
-    }
-}
-
-window.onload = redirectIfMobile;
