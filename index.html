@@ -4,14 +4,16 @@
     <title>Deforestation Awareness</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css" media="only screen and (max-width: 600px)">
     <link rel="icon" href="https://i.pinimg.com/originals/00/fd/b8/00fdb8d98a2372c687b55ee830dd02c9.jpg" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    
     <div class="backdrop">
     <h1 class="title-text"><b>Deforestation Awareness</b></h1>
     </div>
-
+    <span id="to_mobile_container"></span>
     <hr>
     <h3 id="treesCut"> Since you opened this page, 0 trees have been cut. </h3>
     <hr>
@@ -103,8 +105,7 @@
         function redirectIfMobile() {
             const active = localStorage.getItem('redirected');
             if (isMobileDevice() && !active) {
-                localStorage.setItem('redirected', 'true');
-                window.location.href = "mobile.html"; // Replace with your mobile site URL
+                document.getElementById("to_mobile_container").innerHTML = '<a href="mobile.html"><h1 id="to_mobile" style="color: aliceblue;">Redirect To Mobile Site</h1></a>';
             }
         }
         
